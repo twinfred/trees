@@ -118,31 +118,31 @@ class BST {
         return null;
       }
 
-      if (id === node.data.id) {
-        // node has no children
+      if (id === node.data.id) { // We're on the number we're looking for
+        // node has no children - meaning: that id we're looking for doesn't exist
         if (!node.left && !node.right) {
           return null;
         }
-        // node has no left child
+        // node has no left child - meaning: set the new root to the number on the right
         if (!node.left) {
           return node.right;
         }
-        // node has no right childe
+        // node has no right child  - meaning: set the new root to the number on the left
         if (!node.right) {
           return node.left;
         }
-        // node has two children
+        // node has two children 
         let tempNode = node.right;
         while (tempNode.left) {
-          tempNode = tempNode.left;
+          tempNode = tempNode.left; // search down the full left side of the right node
         }
-        node.data.id = tempNode.data.id;
+        node.data.id = tempNode.data.id; // update the number of the node we want to delete to the number way down left
         node.right = removeNode(node.right, tempNode.data.id);
         return node;
-      } else if (id < node.data.id) {
+      } else if (id < node.data.id) { // We're not on the number we're looking for && we're trying to delete a number that is less than the number we're on... move left
         node.left = removeNode(node.left, id);
         return node;
-      } else {
+      } else {  // We're not on the number we're looking for && we're trying to delete a number that is greater than the number we're on... move right
         node.right = removeNode(node.right, id);
       }
     }

@@ -1,0 +1,19 @@
+1. Full Binary Tree
+-- Every node has either 0 or 2 children
+
+2. Complete Binary Tree
+-- All levels are completely filled (except possibly the last level)
+-- Nodes in the last level are filled from left to right
+
+3. Perfect Binary Tree
+-- All internal nodes have 2 children
+-- All leaves are at the same level
+-- Number of nodes in tree can be calculated based on the height(h) -- Equation to find number of nodes = (2^h - 1)
+
+4. Balanced Binary Tree
+-- Height of this tree is O(log N) -- N being the number of Nodes
+-- Height of Left Subtree - Height of Right Subtree <= 1
+
+5. Degenerate / Pathological Tree
+-- Every internal node has only one child
+-- Performance-wise it's the same as a Linked List
