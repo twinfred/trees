@@ -12,7 +12,9 @@
 
 4. Balanced Binary Tree
 -- Height of this tree is O(log N) -- N being the number of Nodes
--- Height of Left Subtree - Height of Right Subtree <= 1
+-- Height of Left Subtree - Height of Right Subtree <= 1 -- Equation: (MinHeight - MaxHeight) <= 1
+-- The MinHeight is the height of the first node that doesn't have either a left and a right leaf
+-- The MaxHeight is the height of the last node that doesn't have both a left and a right node
 
 5. Degenerate / Pathological Tree
 -- Every internal node has only one child

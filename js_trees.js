@@ -1,7 +1,10 @@
 const myTree = ['A', [['B', [['E'], ['F']]], ['C'], ['D', [['G'], ['J'], ['K']]]]];
 
+//
+// Array-Bases BST
+//
 
-// ONE
+// 1. Search all nodes depth first
 
 const depthFirstSearch = tree => {
   const [name, children] = tree;
@@ -18,7 +21,7 @@ const depthFirstSearch = tree => {
 depthFirstSearch(myTree);
 
 
-// TWO
+// 2. Convert all items in the tree to lowercase
 
 const treeToLowerCase = tree => {
   const [name, children] = tree;
@@ -34,8 +37,11 @@ const treeToLowerCase = tree => {
 
 console.log(JSON.stringify(treeToLowerCase(myTree)));
 
+//
+// Object-Based BST
+//
 
-// THREE - BINARY SEARCH TREE
+// 1. Binary search tree with objects
 
 class Node {
   constructor(data) {
@@ -210,4 +216,3 @@ console.log(bst.lookup(25));
 console.log(bst.findMin());
 bst.delete(5);
 console.log(bst.findMin());
-console.log(bst);
